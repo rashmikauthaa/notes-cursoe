@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+textarea {
+  @apply block w-full;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+/* For viewing mode */
+.note-content {
+  @apply whitespace-pre-wrap break-words;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.prose {
+  @apply max-w-none;
+}
+
+.prose h1 {
+  @apply text-2xl font-bold mb-4;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul {
+  @apply list-disc pl-5 mb-4;
+}
+
+/* Base styles */
+.note-card {
+  @apply bg-white rounded-lg shadow-sm p-4 md:p-6 flex flex-col h-full;
+}
+
+.note-card-content {
+  @apply text-gray-600 text-sm mb-4 line-clamp-3 flex-grow;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 640px) {
+  .nav-buttons {
+    @apply flex-col gap-2;
+  }
+
+  .nav-content {
+    @apply flex-col items-start gap-4;
+  }
+
+  .note-grid {
+    @apply grid-cols-1;
+  }
+}
+
+/* Responsive text sizes */
+.responsive-title {
+  @apply text-3xl md:text-4xl lg:text-6xl font-bold;
+}
+
+.responsive-subtitle {
+  @apply text-lg md:text-xl text-gray-600;
+}
+
+/* Landing page specific styles */
+.hero-section {
+  @apply px-4 md:px-8 py-8 md:py-16;
+}
+
+.features-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 md:mt-20;
+}
+
+/* Navigation styles */
+.nav-container {
+  @apply flex flex-col md:flex-row md:items-center gap-4 md:gap-0 justify-between py-4;
+}
+
+.nav-buttons {
+  @apply flex flex-col sm:flex-row gap-2 sm:gap-4;
+}
+
+/* Dashboard styles */
+.dashboard-header {
+  @apply flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8;
+}
+
+.note-grid {
+  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6;
+}
+
+/* Form styles */
+.auth-container {
+  @apply min-h-screen bg-gray-50 flex flex-col justify-center py-8 px-4 sm:px-6 lg:px-8;
+}
+
+.auth-box {
+  @apply bg-white py-6 px-4 sm:px-8 shadow sm:rounded-lg w-full max-w-md mx-auto;
+}
+
+/* Note editor styles */
+.editor-container {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-8;
+}
+
+/* Mobile menu button */
+.mobile-menu-button {
+  @apply md:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100;
+}
+
+/* Responsive padding and margins */
+.section-padding {
+  @apply px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8;
+}
